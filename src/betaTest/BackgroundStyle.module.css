@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.backGround {
+    background-image: linear-gradient(to right, #18959d,#071776);
+    background-size: contain;
+    background-position: center;
+}
+.contentBackground {
+    background-color: #1a3f6b;
+}

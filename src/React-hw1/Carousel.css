@@ -1,0 +1,30 @@
+.carousel {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.carousel-content {
+    border: solid blue 1px;
+    padding: 40px 20px;
+}
+.carousel .carousel-content h2 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 100px;
+}
+.carousel .carousel-content span {
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+}
+.carousel .carousel-content button {
+    display: block;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: solid transparent 1px;
+    background-color: blue;
+    color: #fff;
+    margin-top: 30px;
+}

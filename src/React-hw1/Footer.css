@@ -1,0 +1,10 @@
+.footer {
+    height: 50px;
+    background-color: #000;
+    margin-top: 70px;
+}
+.footer .footer-content {
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+}

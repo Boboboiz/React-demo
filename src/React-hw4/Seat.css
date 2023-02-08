@@ -1,0 +1,27 @@
+.chosenSeat {
+    border: 3px solid orange;
+    background: orange;
+    color: #000;
+    cursor: no-drop !important;
+    border-radius: 5px;
+    width: 45px;
+    height: 35px;
+  }
+  .choosingSeat {
+    background: rgb(109, 238, 109);
+    border: 3px solid rgb(109, 238, 109);
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 45px;
+    height: 35px;
+  }
+  .emptySeat {
+    background: #fff;
+    border: 3px solid transparent;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 45px;
+    height: 35px;
+  }
