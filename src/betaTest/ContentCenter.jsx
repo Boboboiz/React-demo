@@ -6,7 +6,6 @@ import StockChart from "./StockChart";
 
 class ContentCenter extends Component {
   fetchStocksDetail = async () => {
-    console.log(this.props.type);
     try {
       const { data } = await axios.get(
         "https://mkw-socket.vndirect.com.vn/mkwsocket/leaderlarger",
@@ -36,7 +35,7 @@ class ContentCenter extends Component {
         <div>
           <div className="select-btn d-flex justify-content-center">
             {this.props.stocks.data?.map((item, index) => {
-              if (item.type === "FU") return null;
+              if (item.type === "FU" ) return null;
               return (
                 <button
                 onClick={()=> {

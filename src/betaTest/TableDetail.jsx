@@ -21,6 +21,28 @@ class TableDetail extends Component {
       console.log(err);
     }
   };
+  // handleRenderStockDetail = () => {
+  //   return this.props.detail.data?.map((item, index) => {
+  //     let sortTopStock = [];
+  //     let top10Stocks = [];
+  //     let stock = [];
+  //     stock = item.point;
+  //     sortTopStock = stock.sort((a, b) => b - a);
+  //     top10Stocks = sortTopStock?.slice(0, 10);
+  //     return (
+  //       <tr key={index}>
+  //         <td className="text-light fw-bold">{item.symbol}</td>
+  //         {item.point < 0 ? (
+  //           <td className="text-danger">{item.point.toFixed(2)}</td>
+  //         ) : (
+  //           <td className="text-warning">{item.point.toFixed(2)}</td>
+  //         )}
+  //         <td className="text-warning">{item.price.toFixed(2)}</td>
+  //         <td className="text-warning">{item.vol}</td>
+  //       </tr>
+  //     );
+  //   });
+  // };
   render() {
     return (
       <div>
@@ -28,25 +50,27 @@ class TableDetail extends Component {
           <thead>
             <tr style={{ color: "yellow" }}>
               <th>Mã CK</th>
-              <th>Giá</th>
               <th>Điểm</th>
+              <th>Giá</th>
               <th>Giá trị (tỷ đồng)</th>
             </tr>
           </thead>
           <tbody>
-            {this.props.detail.data
-              ?.slice(0, 10)
-              .sort((a, b) => b.value - a.value)
-              .map((item, index) => {
-                return (
-                  <tr key={index}>
-                    <td className="text-light fw-bold">{item.symbol}</td>
-                    {item.point <0 ? <td className="text-danger">{item.point.toFixed(2)}</td> :<td className="text-warning">{item.point.toFixed(2)}</td> }
-                    <td className="text-warning">{item.price}</td>
-                    <td className="text-warning">{item.vol}</td>
-                  </tr>
-                );
-              })}
+            {this.props.detail.data?.slice(0, 10).map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td className="text-light fw-bold">{item.symbol}</td>
+                  {item.point < 0 ? (
+                    <td className="text-danger">{item.point.toFixed(2)}</td>
+                  ) : (
+                    <td className="text-warning">{item.point.toFixed(2)}</td>
+                  )}
+                  <td className="text-warning">{item.price.toFixed(2)}</td>
+                  <td className="text-warning">{item.vol}</td>
+                </tr>
+              );
+            })}
+          
           </tbody>
         </table>
       </div>

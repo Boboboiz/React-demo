@@ -36,7 +36,7 @@ class Carousel extends Component {
         <div className="blog-news row p-2 mt-2">
           <div className="col-4">
             <div className="item d-flex align-items-center ">
-              <a href="https://cafef.vn/di-qua-mua-hoa-dep-nhat-tuong-lai-nao-cho-nghe-moi-gioi-chung-khoan-20230206210958489.chn">
+              <a target='blank' href="https://cafef.vn/di-qua-mua-hoa-dep-nhat-tuong-lai-nao-cho-nghe-moi-gioi-chung-khoan-20230206210958489.chn">
                 <img
                   src="./images/betaImage/beta2.webp"
                   alt="blog img"
@@ -45,7 +45,7 @@ class Carousel extends Component {
                 />
               </a>
               <div className="blog-content ms-2">
-                <a
+                <a target='blank'
                   href="https://cafef.vn/di-qua-mua-hoa-dep-nhat-tuong-lai-nao-cho-nghe-moi-gioi-chung-khoan-20230206210958489.chn"
                   style={{ textDecoration: "none" }}
                 >
@@ -69,7 +69,7 @@ class Carousel extends Component {
           </div>
           <div className="col-4">
             <div className="item d-flex align-items-center ">
-              <a href="https://cafef.vn/di-qua-mua-hoa-dep-nhat-tuong-lai-nao-cho-nghe-moi-gioi-chung-khoan-20230206210958489.chn">
+              <a target='blank' href="https://cafef.vn/di-qua-mua-hoa-dep-nhat-tuong-lai-nao-cho-nghe-moi-gioi-chung-khoan-20230206210958489.chn">
                 <img
                   src="./images/betaImage/beta2.webp"
                   alt="blog img"
@@ -79,6 +79,7 @@ class Carousel extends Component {
               </a>
               <div className="blog-content ms-2">
                 <a
+                target='blank'
                   href="https://cafef.vn/di-qua-mua-hoa-dep-nhat-tuong-lai-nao-cho-nghe-moi-gioi-chung-khoan-20230206210958489.chn"
                   style={{ textDecoration: "none" }}
                 >
@@ -102,7 +103,7 @@ class Carousel extends Component {
           </div>
           <div className="col-4">
             <div className="item d-flex align-items-center ">
-              <a href="https://cafef.vn/di-qua-mua-hoa-dep-nhat-tuong-lai-nao-cho-nghe-moi-gioi-chung-khoan-20230206210958489.chn">
+              <a target='blank'  href="https://cafef.vn/di-qua-mua-hoa-dep-nhat-tuong-lai-nao-cho-nghe-moi-gioi-chung-khoan-20230206210958489.chn">
                 <img
                   src="./images/betaImage/beta2.webp"
                   alt="blog img"
@@ -111,7 +112,7 @@ class Carousel extends Component {
                 />
               </a>
               <div className="blog-content ms-2">
-                <a
+                <a target='blank'
                   href="https://cafef.vn/di-qua-mua-hoa-dep-nhat-tuong-lai-nao-cho-nghe-moi-gioi-chung-khoan-20230206210958489.chn"
                   style={{ textDecoration: "none" }}
                 >

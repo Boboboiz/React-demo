@@ -48,7 +48,6 @@ export default class ContentRight extends Component {
         </div>
         <div className='mt-3'>
           <StockChart />
-
         </div>
       </div>
     )

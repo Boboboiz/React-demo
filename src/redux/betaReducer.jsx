@@ -8,7 +8,8 @@ const initialState = {
 
     },
     type:"",
-    name:[]
+    name:"",
+    chartData:{}
 }
 
 const reducer = (state = initialState, {type, payload}) => {
@@ -24,6 +25,9 @@ const reducer = (state = initialState, {type, payload}) => {
         }
         if( type === actionType.UPDATE_STOCKS_CHART) {
             draft.name = payload
+        }
+        if (type === actionType.UPDATE_DATA_CHART) {
+            draft.chartData = payload
         }
     })
     return newState
