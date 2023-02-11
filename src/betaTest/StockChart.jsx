@@ -35,7 +35,7 @@ class StockChart extends Component {
             data: this.handleRenderChart(),// mảng 
           },
         ],
-        option: {
+        options: {
             xaxis: {
               categories: this.renderSymbol(),// mảng
             }
