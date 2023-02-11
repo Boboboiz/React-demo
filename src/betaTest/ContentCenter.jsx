@@ -80,7 +80,7 @@ class ContentCenter extends Component {
           </div>
           <TableDetail />
           {/* <StockChart2 /> */}
-          <StockChartTest />
+          {/* <StockChartTest /> */}
         </div>
       </div>
     );

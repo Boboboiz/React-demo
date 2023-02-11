@@ -80,7 +80,7 @@ class StockChart extends Component {
     sortBotStock = topStock?.sort((a, b) => a - b);
     top5BotStock = sortBotStock?.slice(0, 5);
     dataForRender = top5Stocks.concat(top5BotStock);
-    console.log(sortTopStock)
+    console.log(dataForRender)
     return dataForRender;
   };
 
@@ -148,7 +148,7 @@ class StockChart extends Component {
       },
       xaxis: {
         type: "string",
-        categories:this.renderSymbol(),
+        categories:[],
         labels: {
           rotate: 0,
           style:{
