@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
+import ReactApexChart from "react-apexcharts";
 import { connect } from "react-redux";
 import axios from "axios";
 class StockChart extends Component {
@@ -10,7 +11,7 @@ class StockChart extends Component {
         "https://mkw-socket.vndirect.com.vn/mkwsocket/leaderlarger",
         {
           params: {
-            index: this.props.name || "VNINDEX",
+            index: this.props.name || undefined,
           },
         }
       );
@@ -24,23 +25,21 @@ class StockChart extends Component {
   };
   
   componentDidUpdate(prevProps) {
-    if (prevProps.name !== this.props.name) {
+    if (prevProps.name !== this.props.name ) {
       this.fetchDataChart();
     }
-    if (prevProps.chartData !== this.props.chartData) {
+    if (prevProps.chartData !== this.props.chartData) {     
       this.setState({
         series: [
           {
-            data: this.handleRenderChart(),
+            data: this.handleRenderChart(),// mảng 
           },
         ],
-        option: [
-          {
+        option: {
             xaxis: {
-              categories: this.renderSymbol()
+              categories: this.renderSymbol(),// mảng
             }
-          }
-        ]
+        }
       });
     }
   }
@@ -52,7 +51,7 @@ class StockChart extends Component {
     let top5BotStock = [];
     let symbols = [];
     if (!this.props.chartData || !this.props.chartData.data) return [];
-    topStock = this.props.chartData.data?.map((item) => item.point.toFixed(2));
+    topStock = this.props.chartData.data?.map((item) => item.point);
     sortTopStock = topStock?.sort((a, b) => b - a);
     top5Stocks = sortTopStock?.slice(0, 5);
     sortBotStock = topStock?.sort((a, b) => a - b);
@@ -60,11 +59,10 @@ class StockChart extends Component {
   
     let dataForRender = top5Stocks.concat(top5BotStock);
     this.props.chartData.data?.forEach(item => {
-      if (dataForRender.includes(item.point.toFixed(2))) {
+      if (dataForRender.includes(item.point)) {
         symbols.push(item.symbol)
       }
     })
-    console.log(symbols);
     return symbols;
 
   }
@@ -76,13 +74,13 @@ class StockChart extends Component {
     let top5BotStock = [];
     let dataForRender = [];
     if (!this.props.chartData || !this.props.chartData.data) return [];
-    topStock = this.props.chartData.data?.map((item) => item.point.toFixed(2));
+    topStock = this.props.chartData.data?.map((item) => item.point);
     sortTopStock = topStock?.sort((a, b) => b - a);
     top5Stocks = sortTopStock?.slice(0, 5);
     sortBotStock = topStock?.sort((a, b) => a - b);
     top5BotStock = sortBotStock?.slice(0, 5);
     dataForRender = top5Stocks.concat(top5BotStock);
-
+    console.log(sortTopStock)
     return dataForRender;
   };
 
@@ -101,7 +99,11 @@ class StockChart extends Component {
       title: {
         display: true,
         text: "TOP cổ phiếu ảnh hưởng chỉ số",
-        fontSize: 15,
+        style:{
+          color:'#F2FC54',
+          fontSize: 15,
+          fontWeight: 'semibold',
+        }
       },
       plotOptions: {
         bar: {
@@ -130,19 +132,30 @@ class StockChart extends Component {
       },
       dataLabels: {
         enabled: false,
+       
       },
-      yaxis: {
+      yaxis: { 
         labels: {
           formatter: function (y) {
-            return y.toFixed(0);
+            return y.toFixed(2);
+          },
+          style:{
+            colors:'#fff',
+            fontWeight:'bold',
+            fontSize: 12,
           },
         },
       },
       xaxis: {
         type: "string",
-        categories: [1,2,3,4,5,6,7,8,9,10],
+        categories:this.renderSymbol(),
         labels: {
           rotate: 0,
+          style:{
+            colors:'#fff',
+            fontWeight:'bold',
+            fontSize: 12,
+          },
         },
       },
     },
@@ -151,12 +164,13 @@ class StockChart extends Component {
   render() {
     return (
       <div>
-        <Chart
+        <ReactApexChart
           options={this.state.options}
           series={this.state.series}
           type="bar"
           width={400}
           height={320}
+          
         />
        
       </div>

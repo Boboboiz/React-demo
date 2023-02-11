@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import TableDetail from "./TableDetail";
 import axios from "axios";
 import StockChart from "./StockChart";
+import StockChart2 from "./StockChart2";
+import StockChartTest from "./StockChartTest";
 
 class ContentCenter extends Component {
   fetchStocksDetail = async () => {
@@ -77,6 +79,8 @@ class ContentCenter extends Component {
             })}
           </div>
           <TableDetail />
+          {/* <StockChart2 /> */}
+          <StockChartTest />
         </div>
       </div>
     );
