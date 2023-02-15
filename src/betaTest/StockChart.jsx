@@ -4,7 +4,7 @@ import ReactApexChart from "react-apexcharts";
 import { connect } from "react-redux";
 import axios from "axios";
 class StockChart extends Component {
- 
+  
   fetchDataChart = async () => {
     try {
       const { data } = await axios.get(

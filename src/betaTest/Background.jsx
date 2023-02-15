@@ -9,6 +9,20 @@ import ContentCenter from "./ContentCenter";
 import ContentRight from "./ContentRight";
 import Marquee from "react-fast-marquee";
 class Background extends Component {
+  fetchDataLineChart = async () => {
+    try {
+      const {data } = await axios.get(
+        "http://192.168.15.174:3000/giacophieu.dat",
+        {
+          params: {
+            ticker: undefined,
+          }
+        }
+      )
+    } catch (err) {
+
+    }
+  }
   fecthData = async () => {
     try {
       const res = await axios({

@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import TableDetail from "./TableDetail";
 import axios from "axios";
 import StockChart from "./StockChart";
-import StockChart2 from "./StockChart2";
-import StockChartTest from "./StockChartTest";
+import LineChart from "./LineChart";
 
 class ContentCenter extends Component {
+
   fetchStocksDetail = async () => {
     try {
       const { data } = await axios.get(
@@ -79,8 +79,7 @@ class ContentCenter extends Component {
             })}
           </div>
           <TableDetail />
-          {/* <StockChart2 /> */}
-          {/* <StockChartTest /> */}
+          <LineChart />
         </div>
       </div>
     );

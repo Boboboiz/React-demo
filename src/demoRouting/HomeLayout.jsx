@@ -11,7 +11,8 @@ function HomeLayout() {
         <Link to="/user-form" className="me-2 text-light fw-semibold" style={{textDecoration:"none"}}>
         User-form-demo /
         </Link>
-        <Link to='/beta-test' className="me-2 text-light fw-semibold" style={{textDecoration:"none"}}> Beta-test</Link>
+        <Link to='/beta-test' className="me-2 text-light fw-semibold" style={{textDecoration:"none"}}> Beta-test /</Link>
+        <Link to='/beta-demo' className="me-2 text-light fw-semibold" style={{textDecoration: "none"}}> Beta-demo</Link>
       </div>
         <Outlet />  
       {/*Outlet vị trị component con  */}

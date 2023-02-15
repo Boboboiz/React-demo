@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    outline: 0;
+}
+.icon:hover {
+    color: red  ;
+    transition: all 0.5;
+}
+.iconPosition {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    color: black;
+    transform: translateY(-50%);
+}

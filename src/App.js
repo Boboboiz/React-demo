@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
+import BetaIndex from "./betaDemo/BetaIndex";
 import Background from "./betaTest/Background";
 
 // import Home from "./classEx5/Ex5/Home"
@@ -30,6 +31,7 @@ function App() {
         <Route path="/booking-ticket" element={<HomeBooking />} />
         <Route path="/user-form" element={<Home />} />
         <Route path="/beta-test" element={< Background />}/>
+        <Route path="/beta-demo" element={<BetaIndex />}/>
         </Route>
        
       </Routes>

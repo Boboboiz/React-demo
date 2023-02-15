@@ -6,6 +6,7 @@ import productReducer from "./productReducer"
 import userReducer from './userReducer'
 import seatReducer from './seatReducer'
 import betaReducer from './betaReducer'
+import betaDemoReducer from './betaDemoReducer'
 //export {rootReducer} = export const rootReducer = combineReducerscers({});
 const rootReducer = combineReducers({
     // demoReducer, // ES6 object literal
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
     productReducer,
     userReducer,
     seatReducer,
-    betaReducer
+    betaReducer,
+    demoReducer : betaDemoReducer,
 });
 
 export default rootReducer

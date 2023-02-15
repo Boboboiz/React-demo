@@ -9,6 +9,8 @@ const initialState = {
     },
     type:"",
     name:"",
+    ticker:"",
+    chartData: {},
     chartData:{}
 }
 
